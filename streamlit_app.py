@@ -1,5 +1,6 @@
 import streamlit as st
 
-params = st.experimental_get_query_params()
+if "some_string" not in st.session_state:
+  params = st.experimental_get_query_params()
 
 st.write(params)
