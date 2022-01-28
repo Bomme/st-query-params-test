@@ -1,9 +1,13 @@
+import logging
+
 import streamlit as st
 
 import separate_script
 
 params = st.experimental_get_query_params()
+logging.info(f"{params=}")
 params_separate = separate_script.get_query_params()
+logging.info(f"{params_separate=}")
 
 st.write("Main script")
 st.write(params)
