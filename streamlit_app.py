@@ -6,8 +6,8 @@ import separate_script
 
 params = st.experimental_get_query_params()
 logging.info(f"{params=}")
-if not params:
-  st.session_state["MY_FIELD"] = "some value"
+if not "my-field" in params:
+  st.session_state["MY_FIELD"] = "some default value"
 
 params_separate = separate_script.get_query_params()
 if "MY_FIELD" in st.session_state:
