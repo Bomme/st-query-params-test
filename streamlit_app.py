@@ -11,7 +11,7 @@ if not params:
 
 params_separate = separate_script.get_query_params()
 if "MY_FIELD" in st.session_state:
-  logging.info(f"{params_separate=} {st.session_state["MY_FIELD"]=}")
+  logging.info(f"{params_separate=} {st.session_state['MY_FIELD']=}")
 else:
   logging.info(f"{params_separate=}")
 
