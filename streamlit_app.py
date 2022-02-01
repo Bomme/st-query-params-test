@@ -4,7 +4,7 @@ import streamlit as st
 
 params = st.experimental_get_query_params()
 logging.info(f"{params=}")
-if not "my-field" in params:
+if "my-field" not in params:
     st.session_state["MY_FIELD"] = "some default value"
 
 params_second = st.experimental_get_query_params()
